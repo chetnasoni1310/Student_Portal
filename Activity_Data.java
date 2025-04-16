@@ -5,34 +5,46 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Activity_Data {
+
                          //*******************ACTIVITIES**************** */
-public Map<String, String> Activities(Scanner sc)
-{
-    System.out.println("Enter your activities which you have performed : ")
-   ;
 
-   String[] activities = { "presentation", "research", "photoGraphyClub", "danceClub" };
-   Map<String, String> participationMap = new HashMap<>();
+  private static final  Map<String, String> activity = new HashMap<>();
+public static void addActivity(Scanner sc) {
+    System.out.println("Enter your activities which you have performed : ");
+    boolean isEntry = true;
 
-   
-   for (String activity : activities) {
-       System.out.print("Did you participate in " + activity + "? (yes/no): ");
-       String response = sc.nextLine().trim().toLowerCase();
-       participationMap.put(activity, response);
-   }
-  return participationMap;
+    while (isEntry) {
+        System.out.println("Enter the activity name : ");
+        String activityName = sc.nextLine();
+        System.out.println("Enter the activity description : ");
+        String activityDescription = sc.nextLine();
 
-}
-public static void activityDisplay(Map<String, String> participationMap) {
-    System.out.println("\n📋 Participation Summary:");
-    for (Map.Entry<String, String> entry : participationMap.entrySet()) {
-        String activity = entry.getKey();
-        String participated = entry.getValue();
-        System.out.println(activity + ": " + participated);
+        activity.put(activityName, activityDescription);
+
+        System.out.println("Activity added successfully !!");
+
+        System.out.println("Press 0 for stop adding : ");
+        int isStop = sc.nextInt();
+        if (isStop == 0) {
+            isEntry = false;
+        }
     }
 }
- 
 
+    public static void displayActivity()
+    {
+        if(activity.isEmpty())
+        {
+            System.out.println("You have not participated in any activity yet.\n" +
+                    " Please record your Activities first by pressing 3 \n"
+            );
+            return;
+        }
 
-            
+        System.out.println("Your activities : ");
+        for(Map.Entry<String , String> entry : activity.entrySet())
+        {
+           System.out.println(entry.getKey() + " : "+entry.getValue());
+        }
+    }
 }
