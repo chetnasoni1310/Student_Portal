@@ -9,6 +9,10 @@ public class Activity_Data {
                          //*******************ACTIVITIES**************** */
 
   private static final  Map<String, String> activity = new HashMap<>();
+
+
+
+    /**********************************************************************************************************************************/
 public static void addActivity(Scanner sc) {
     System.out.println("Enter your activities which you have performed : ");
     boolean isEntry = true;
@@ -23,13 +27,19 @@ public static void addActivity(Scanner sc) {
 
         System.out.println("Activity added successfully !!");
 
-        System.out.println("Press 0 for stop adding : ");
+        System.out.println("Press 0 for stop adding or Press any key to continue : ");
+
         int isStop = sc.nextInt();
         if (isStop == 0) {
             isEntry = false;
         }
     }
 }
+
+
+
+
+    /**********************************************************************************************************************************/
 
     public static void displayActivity()
     {
@@ -47,4 +57,10 @@ public static void addActivity(Scanner sc) {
            System.out.println(entry.getKey() + " : "+entry.getValue());
         }
     }
+
+
+
+
+
+/**********************************************************************************************************************************/
 }
