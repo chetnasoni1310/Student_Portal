@@ -1,0 +1,18 @@
+		Student Report Card 
+	-------------------------
+Semester: 2
+
+Subjects and Marks :- 
+Physics ---> 22
+C-Language ---> 33
+Engineering Graphics ---> 44
+Electronics ---> 55
+Environmental ---> 66
+
+
+Total Marks  --->220.0
+
+
+Total CGPA  --->4.63
+
+Generated On : 17-04-2025
