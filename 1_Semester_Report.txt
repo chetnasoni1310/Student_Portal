@@ -1,0 +1,18 @@
+		Student Report Card 
+	-------------------------
+Semester: 1
+
+Subjects and Marks :- 
+Maths ---> 10
+Chemistry ---> 10
+Mechanical ---> 10
+Electrical ---> 10
+English ---> 10
+
+
+Total Marks  --->50.0
+
+
+Total CGPA  --->1.05
+
+Generated On : 17-04-2025
